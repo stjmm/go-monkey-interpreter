@@ -23,7 +23,7 @@ func (l *Lexer) NextToken() token.Token {
 	switch l.ch {
 	case '=':
 		// Probably should abstract this if we have more two char toks
-		if l.peekChar() == '='{
+		if l.peekChar() == '=' {
 			ch := l.ch
 			l.readChar()
 			literal := string(ch) + string(l.ch)
